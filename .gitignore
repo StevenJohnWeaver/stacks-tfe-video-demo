@@ -1,0 +1,11 @@
+# Block the heavy provider binaries
+.terraform/
+**/.terraform/*
+
+# Block local state files
+*.tfstate
+*.tfstate.*
+
+# Block OS-specific junk
+.DS_Store
+Thumbs.db

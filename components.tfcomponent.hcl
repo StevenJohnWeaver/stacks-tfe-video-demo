@@ -14,6 +14,11 @@ component "cluster" {
   providers = {
     aws    = provider.aws.main
     random = provider.random.main
+    # Map the new providers here
+    time      = provider.time.main
+    tls       = provider.tls.main
+    cloudinit = provider.cloudinit.main
+    null      = provider.null.main
   }
   inputs = {
     cluster_name        = var.cluster_name

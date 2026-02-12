@@ -11,6 +11,23 @@ required_providers {
     source  = "hashicorp/random"
     version = "~> 3.5"
   }
+  # Missing providers required by the EKS module
+  time       = { 
+    source = "hashicorp/time", 
+    version = "~> 0.9" 
+  }
+  tls        = {
+    source = "hashicorp/tls", 
+    version = "~> 4.0" 
+  }
+  cloudinit  = { 
+    source = "hashicorp/cloudinit", 
+    version = "~> 2.3" 
+  }
+  null       = { 
+    source = "hashicorp/null", 
+    version = "~> 3.2" 
+  }
 }
 
 provider "aws" "main" {
@@ -37,3 +54,7 @@ provider "kubernetes" "main" {
 }
 
 provider "random" "main" {}
+provider "time" "main" {}
+provider "tls" "main" {}
+provider "cloudinit" "main" {}
+provider "null" "main" {}
